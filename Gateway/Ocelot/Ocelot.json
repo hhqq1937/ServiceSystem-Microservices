@@ -1,0 +1,35 @@
+{
+  "Routes": [
+    {
+      //customer
+      "DownstreamPathTemplate": "/{url}", //下游(指访问服务的接口)
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.31.156",
+          //"Host": "172.0.0.2",
+          "Port": 8089
+        }
+      ],
+      "UpstreamPathTemplate": "/cus/{url}", //上游也就是用户输入的请求Url模板
+      "UpstreamHttpMethod": [ "Get" ], //上游请求http方法，可使用数
+      "Priority": 1 //优先级
+    },
+    {
+      //service-item
+      "DownstreamPathTemplate": "/{url}", //下游(指访问服务的接口)
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          //"Host": "192.168.31.156",
+          "Host": "172.0.0.3",
+          "Port": 8087
+        }
+      ],
+      "UpstreamPathTemplate": "/item/{url}", //上游也就是用户输入的请求Url模板
+      "UpstreamHttpMethod": [ "Get" ], //上游请求http方法，可使用数
+      "Priority": 1 //优先级
+    }
+  ],
+  "GlobalConfiguration": {}
+}

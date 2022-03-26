@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package greetcore;
+
+service Greetercore {
+  // Sends a greeting
+  rpc SayHello2 (HelloRequest) returns (HelloReply);
+  rpc TestGrpc2(TestRequest) returns(TestReply);
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings.
+message HelloReply {
+  string message = 1;
+}
+
+message TestRequest{
+  string name2 = 1;
+}
+
+message TestReply{
+  string message = 1;
+  string count = 2;
+}
+
+

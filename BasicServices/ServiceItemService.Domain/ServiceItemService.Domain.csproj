@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="service\" />
+    <Folder Include="common\" />
+    <Folder Include="Factory\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Base.infrastructure\Base.infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
